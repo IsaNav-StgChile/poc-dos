@@ -4,7 +4,17 @@
     <tbody> 
         <% if @photos %> 
             <td>Fotos:</td> 
-            <td><%= @photos %></td> 
+            <td><%= @photos.size %></td> 
         <% end %>
     </tbody> 
 </table> 
+
+<% if @photos %>
+
+<div class="container photos row">
+    <% @photos.each do |photo| %>
+    <%= render 'photos/photo', photo: photo %>
+    <% end %>
+</div>
+
+<% end %>	
