@@ -2,7 +2,7 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @photo.url %>
+  <%= image_tag @photo.image.variant(resize:'300x300') %>
 </p>
 
 <p>
